@@ -1,0 +1,548 @@
+2025-07-13 05:38:47,161 - __main__ - INFO - Processing resume 6872f8d66b5ad0ea0620a04c
+2025-07-13 05:38:47,241 - __main__ - INFO - Extracting text from uploads/resume1.pdf
+2025-07-13 05:38:47,448 - parse_pdf - INFO - Successfully extracted text using pypdf2
+2025-07-13 05:38:47,448 - __main__ - INFO - Parsing resume sections for 6872f8d66b5ad0ea0620a04c
+2025-07-13 05:38:47,613 - db - INFO - Resume 6872f8d66b5ad0ea0620a04c updated successfully
+2025-07-13 05:38:47,613 - __main__ - INFO - Generating embedding for 6872f8d66b5ad0ea0620a04c
+2025-07-13 05:38:47,901 - db - INFO - Embedding saved for resume 6872f8d66b5ad0ea0620a04c
+2025-07-13 05:38:47,906 - __main__ - INFO - Finding job matches for 6872f8d66b5ad0ea0620a04c
+2025-07-13 05:38:48,053 - matcher - WARNING - No active jobs found
+2025-07-13 05:38:48,053 - __main__ - INFO - Successfully processed resume 6872f8d66b5ad0ea0620a04c in 0.89 seconds
+2025-07-13 05:38:48,053 - __main__ - INFO - Single resume processing completed successfully
+2025-07-13 05:38:48,117 - db - INFO - Database connection closed
+2025-07-13 05:38:48,117 - __main__ - INFO - AI Engine shutdown complete
+2025-07-13 06:01:59,878 - __main__ - INFO - Processing resume 6872f8d66b5ad0ea0620a04c
+2025-07-13 06:01:59,944 - __main__ - INFO - Extracting text from uploads/resume1.pdf
+2025-07-13 06:01:59,944 - __main__ - ERROR - Error processing resume 6872f8d66b5ad0ea0620a04c: 'DummyParser' object has no attribute 'extract_text'
+2025-07-13 06:02:00,026 - db - INFO - Resume 6872f8d66b5ad0ea0620a04c updated successfully
+2025-07-13 06:02:00,026 - __main__ - ERROR - Single resume processing failed
+2025-07-13 06:02:00,087 - db - INFO - Database connection closed
+2025-07-13 06:02:00,087 - __main__ - INFO - AI Engine shutdown complete
+2025-07-13 06:14:55,852 - __main__ - INFO - Processing resume 6872f8d66b5ad0ea0620a04c
+2025-07-13 06:14:55,916 - __main__ - INFO - Extracting text from uploads/resume1.pdf
+2025-07-13 06:14:56,028 - __main__ - INFO - Parsing resume sections for 6872f8d66b5ad0ea0620a04c
+2025-07-13 06:14:57,341 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 06:14:57,417 - db - INFO - Resume 6872f8d66b5ad0ea0620a04c updated successfully
+2025-07-13 06:14:57,417 - __main__ - INFO - Generating embedding for 6872f8d66b5ad0ea0620a04c
+2025-07-13 06:14:57,555 - db - INFO - Embedding saved for resume 6872f8d66b5ad0ea0620a04c
+2025-07-13 06:14:57,557 - __main__ - INFO - Finding job matches for 6872f8d66b5ad0ea0620a04c
+2025-07-13 06:14:57,687 - matcher - WARNING - No active jobs found
+2025-07-13 06:14:57,687 - __main__ - INFO - Successfully processed resume 6872f8d66b5ad0ea0620a04c in 1.84 seconds
+2025-07-13 06:14:57,687 - __main__ - INFO - Single resume processing completed successfully
+2025-07-13 06:14:57,750 - db - INFO - Database connection closed
+2025-07-13 06:14:57,750 - __main__ - INFO - AI Engine shutdown complete
+2025-07-14 20:01:45,495 - __main__ - INFO - Processing resume 6872f8d66b5ad0ea0620a04c
+2025-07-14 20:01:45,567 - __main__ - INFO - Extracting text from uploads/resume1.pdf
+2025-07-14 20:01:45,727 - __main__ - INFO - Parsing resume sections for 6872f8d66b5ad0ea0620a04c
+2025-07-14 20:01:46,871 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 20:01:46,957 - db - INFO - Resume 6872f8d66b5ad0ea0620a04c updated successfully
+2025-07-14 20:01:46,957 - __main__ - INFO - Generating embedding for 6872f8d66b5ad0ea0620a04c
+2025-07-14 20:01:47,145 - db - INFO - Embedding saved for resume 6872f8d66b5ad0ea0620a04c
+2025-07-14 20:01:47,145 - __main__ - INFO - Finding job matches for 6872f8d66b5ad0ea0620a04c
+2025-07-14 20:01:47,285 - matcher - WARNING - No active jobs found
+2025-07-14 20:01:47,286 - __main__ - INFO - Successfully processed resume 6872f8d66b5ad0ea0620a04c in 1.79 seconds
+2025-07-14 20:01:47,286 - __main__ - INFO - Single resume processing completed successfully
+2025-07-14 20:01:47,357 - db - INFO - Database connection closed
+2025-07-14 20:01:47,357 - __main__ - INFO - AI Engine shutdown complete
+2025-07-14 22:08:43,037 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-14 22:08:43,121 - __main__ - INFO - Found 1 pending resumes
+2025-07-14 22:08:43,122 - __main__ - INFO - Processing resume 68753591f7829d10ecb520e3
+2025-07-14 22:08:43,187 - __main__ - ERROR - Resume 68753591f7829d10ecb520e3 not found
+2025-07-14 22:08:43,188 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-14 22:08:43,188 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-14 22:08:43,254 - db - INFO - Database connection closed
+2025-07-14 22:08:43,254 - __main__ - INFO - AI Engine shutdown complete
+2025-07-14 22:09:50,820 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-14 22:09:50,887 - __main__ - INFO - Found 1 pending resumes
+2025-07-14 22:09:50,888 - __main__ - INFO - Processing resume 68753591f7829d10ecb520e3
+2025-07-14 22:09:50,955 - __main__ - ERROR - Resume 68753591f7829d10ecb520e3 not found
+2025-07-14 22:09:50,956 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-14 22:09:50,956 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-14 22:09:51,023 - db - INFO - Database connection closed
+2025-07-14 22:09:51,023 - __main__ - INFO - AI Engine shutdown complete
+2025-07-14 22:19:09,883 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-14 22:19:09,949 - __main__ - INFO - Found 1 pending resumes
+2025-07-14 22:19:09,950 - __main__ - INFO - Processing resume 68753591f7829d10ecb520e3
+2025-07-14 22:19:10,015 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752511889/resumes/resume_6875108e90f502d6c5cccf00_1752511887025
+2025-07-14 22:19:11,978 - __main__ - INFO - Parsing resume sections for 68753591f7829d10ecb520e3
+2025-07-14 22:19:13,567 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 22:19:13,639 - db - INFO - Resume 68753591f7829d10ecb520e3 updated successfully
+2025-07-14 22:19:13,639 - __main__ - INFO - Generating embedding for 68753591f7829d10ecb520e3
+2025-07-14 22:19:13,776 - db - INFO - Embedding saved for resume 68753591f7829d10ecb520e3
+2025-07-14 22:19:13,777 - __main__ - INFO - Finding job matches for 68753591f7829d10ecb520e3
+2025-07-14 22:19:13,983 - matcher - WARNING - No active jobs found
+2025-07-14 22:19:13,983 - __main__ - INFO - Successfully processed resume 68753591f7829d10ecb520e3 in 4.03 seconds
+2025-07-14 22:19:13,983 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-14 22:19:13,984 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-14 22:19:14,050 - db - INFO - Database connection closed
+2025-07-14 22:19:14,050 - __main__ - INFO - AI Engine shutdown complete
+2025-07-14 23:29:20,051 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-14 23:29:20,115 - __main__ - INFO - No pending resumes found
+2025-07-14 23:29:20,115 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 0}
+2025-07-14 23:29:20,179 - db - INFO - Database connection closed
+2025-07-14 23:29:20,179 - __main__ - INFO - AI Engine shutdown complete
+2025-07-14 23:50:40,532 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-14 23:50:40,593 - __main__ - INFO - Found 1 pending resumes
+2025-07-14 23:50:40,593 - __main__ - INFO - Processing resume 687550be8f2d54260a967136
+2025-07-14 23:50:40,656 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752518845/resumes/resume_6875108e90f502d6c5cccf00_1752518844131
+2025-07-14 23:50:41,688 - __main__ - INFO - Parsing resume sections for 687550be8f2d54260a967136
+2025-07-14 23:50:42,438 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 23:50:42,518 - db - INFO - Resume 687550be8f2d54260a967136 updated successfully
+2025-07-14 23:50:42,519 - __main__ - INFO - Generating embedding for 687550be8f2d54260a967136
+2025-07-14 23:50:42,629 - db - INFO - Embedding saved for resume 687550be8f2d54260a967136
+2025-07-14 23:50:42,629 - __main__ - INFO - Finding job matches for 687550be8f2d54260a967136
+2025-07-14 23:50:42,754 - matcher - WARNING - No active jobs found
+2025-07-14 23:50:42,754 - __main__ - INFO - Successfully processed resume 687550be8f2d54260a967136 in 2.16 seconds
+2025-07-14 23:50:42,754 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-14 23:50:42,754 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-14 23:50:42,849 - db - INFO - Database connection closed
+2025-07-14 23:50:42,858 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:06:43,445 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:06:43,518 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:06:43,519 - __main__ - INFO - Processing resume 687555238f2d54260a96736f
+2025-07-15 00:06:43,587 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752519970/resumes/resume_6875108e90f502d6c5cccf00_1752519969165
+2025-07-15 00:06:44,384 - __main__ - INFO - Parsing resume sections for 687555238f2d54260a96736f
+2025-07-15 00:06:45,369 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:06:45,442 - db - INFO - Resume 687555238f2d54260a96736f updated successfully
+2025-07-15 00:06:45,442 - __main__ - INFO - Generating embedding for 687555238f2d54260a96736f
+2025-07-15 00:06:45,553 - db - INFO - Embedding saved for resume 687555238f2d54260a96736f
+2025-07-15 00:06:45,553 - __main__ - INFO - Finding job matches for 687555238f2d54260a96736f
+2025-07-15 00:06:45,690 - matcher - WARNING - No active jobs found
+2025-07-15 00:06:45,690 - __main__ - INFO - Successfully processed resume 687555238f2d54260a96736f in 2.17 seconds
+2025-07-15 00:06:45,690 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:06:45,690 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:06:45,758 - db - INFO - Database connection closed
+2025-07-15 00:06:45,759 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:11:09,964 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:11:10,032 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:11:10,032 - __main__ - INFO - Processing resume 687555ce8f2d54260a967414
+2025-07-15 00:11:10,100 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752520142/resumes/resume_6875108e90f502d6c5cccf00_1752520140479
+2025-07-15 00:11:10,949 - __main__ - INFO - Parsing resume sections for 687555ce8f2d54260a967414
+2025-07-15 00:11:11,893 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:11:12,033 - db - INFO - Resume 687555ce8f2d54260a967414 updated successfully
+2025-07-15 00:11:12,033 - __main__ - INFO - Generating embedding for 687555ce8f2d54260a967414
+2025-07-15 00:11:12,034 - embedding - WARNING - No text content found for embedding generation
+2025-07-15 00:11:12,034 - __main__ - INFO - Successfully processed resume 687555ce8f2d54260a967414 in 2.00 seconds
+2025-07-15 00:11:12,035 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:11:12,035 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:11:12,102 - db - INFO - Database connection closed
+2025-07-15 00:11:12,102 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:16:17,609 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:16:17,676 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:16:17,676 - __main__ - INFO - Processing resume 6875576a8f2d54260a967614
+2025-07-15 00:16:17,745 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752520553/resumes/resume_6875108e90f502d6c5cccf00_1752520552113
+2025-07-15 00:16:18,642 - __main__ - INFO - Parsing resume sections for 6875576a8f2d54260a967614
+2025-07-15 00:16:19,486 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:16:19,559 - db - INFO - Resume 6875576a8f2d54260a967614 updated successfully
+2025-07-15 00:16:19,559 - __main__ - INFO - Generating embedding for 6875576a8f2d54260a967614
+2025-07-15 00:16:19,559 - embedding - WARNING - No text content found for embedding generation
+2025-07-15 00:16:19,559 - __main__ - INFO - Successfully processed resume 6875576a8f2d54260a967614 in 1.88 seconds
+2025-07-15 00:16:19,560 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:16:19,560 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:16:19,626 - db - INFO - Database connection closed
+2025-07-15 00:16:19,626 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:23:14,273 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:23:14,338 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:23:14,338 - __main__ - INFO - Processing resume 6875591c8f2d54260a9677fe
+2025-07-15 00:23:14,404 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752520987/resumes/resume_6875108e90f502d6c5cccf00_1752520984992
+2025-07-15 00:23:15,243 - __main__ - INFO - Parsing resume sections for 6875591c8f2d54260a9677fe
+2025-07-15 00:23:16,126 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:23:16,198 - db - INFO - Resume 6875591c8f2d54260a9677fe updated successfully
+2025-07-15 00:23:16,198 - __main__ - INFO - Generating embedding for 6875591c8f2d54260a9677fe
+2025-07-15 00:23:16,308 - db - INFO - Embedding saved for resume 6875591c8f2d54260a9677fe
+2025-07-15 00:23:16,308 - __main__ - INFO - Finding job matches for 6875591c8f2d54260a9677fe
+2025-07-15 00:23:16,438 - matcher - WARNING - No active jobs found
+2025-07-15 00:23:16,438 - __main__ - INFO - Successfully processed resume 6875591c8f2d54260a9677fe in 2.10 seconds
+2025-07-15 00:23:16,439 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:23:16,439 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:23:16,505 - db - INFO - Database connection closed
+2025-07-15 00:23:16,506 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:24:53,918 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:24:53,982 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:24:53,982 - __main__ - INFO - Processing resume 6875596d8f2d54260a967863
+2025-07-15 00:24:54,200 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752521068/resumes/resume_6875108e90f502d6c5cccf00_1752521067041
+2025-07-15 00:24:55,006 - __main__ - INFO - Parsing resume sections for 6875596d8f2d54260a967863
+2025-07-15 00:24:56,374 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:24:56,455 - db - INFO - Resume 6875596d8f2d54260a967863 updated successfully
+2025-07-15 00:24:56,455 - __main__ - INFO - Generating embedding for 6875596d8f2d54260a967863
+2025-07-15 00:24:56,633 - db - INFO - Embedding saved for resume 6875596d8f2d54260a967863
+2025-07-15 00:24:56,633 - __main__ - INFO - Finding job matches for 6875596d8f2d54260a967863
+2025-07-15 00:24:56,761 - matcher - WARNING - No active jobs found
+2025-07-15 00:24:56,761 - __main__ - INFO - Successfully processed resume 6875596d8f2d54260a967863 in 2.78 seconds
+2025-07-15 00:24:56,762 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:24:56,762 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:24:56,831 - db - INFO - Database connection closed
+2025-07-15 00:24:56,831 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:29:10,978 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:29:11,043 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:29:11,043 - __main__ - INFO - Processing resume 68755a768f2d54260a967a0e
+2025-07-15 00:29:11,117 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752521333/resumes/resume_6875108e90f502d6c5cccf00_1752521332999
+2025-07-15 00:29:12,032 - __main__ - INFO - Parsing resume sections for 68755a768f2d54260a967a0e
+2025-07-15 00:29:13,175 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:29:13,245 - db - INFO - Resume 68755a768f2d54260a967a0e updated successfully
+2025-07-15 00:29:13,246 - __main__ - INFO - Generating embedding for 68755a768f2d54260a967a0e
+2025-07-15 00:29:13,398 - db - INFO - Embedding saved for resume 68755a768f2d54260a967a0e
+2025-07-15 00:29:13,398 - __main__ - INFO - Finding job matches for 68755a768f2d54260a967a0e
+2025-07-15 00:29:13,526 - matcher - WARNING - No active jobs found
+2025-07-15 00:29:13,527 - __main__ - INFO - Successfully processed resume 68755a768f2d54260a967a0e in 2.48 seconds
+2025-07-15 00:29:13,527 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:29:13,527 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:29:13,592 - db - INFO - Database connection closed
+2025-07-15 00:29:13,593 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 00:51:16,666 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 00:51:16,746 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 00:51:16,747 - __main__ - INFO - Processing resume 68755f880d8ee0637edb102f
+2025-07-15 00:51:16,813 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752522631/resumes/resume_6875108e90f502d6c5cccf00_1752522630064
+2025-07-15 00:51:17,946 - __main__ - INFO - Parsing resume sections for 68755f880d8ee0637edb102f
+2025-07-15 00:51:18,906 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 00:51:18,982 - db - INFO - Resume 68755f880d8ee0637edb102f updated successfully
+2025-07-15 00:51:18,982 - __main__ - INFO - Generating embedding for 68755f880d8ee0637edb102f
+2025-07-15 00:51:19,100 - db - INFO - Embedding saved for resume 68755f880d8ee0637edb102f
+2025-07-15 00:51:19,100 - __main__ - INFO - Finding job matches for 68755f880d8ee0637edb102f
+2025-07-15 00:51:19,234 - matcher - WARNING - No jobs found in database
+2025-07-15 00:51:19,234 - __main__ - INFO - Successfully processed resume 68755f880d8ee0637edb102f in 2.49 seconds
+2025-07-15 00:51:19,234 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 00:51:19,236 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 00:51:19,303 - db - INFO - Database connection closed
+2025-07-15 00:51:19,304 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 01:01:35,554 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 01:01:35,622 - __main__ - INFO - No pending resumes found
+2025-07-15 01:01:35,622 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 0}
+2025-07-15 01:01:35,690 - db - INFO - Database connection closed
+2025-07-15 01:01:35,691 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 01:02:39,828 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 01:02:39,917 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 01:02:39,918 - __main__ - INFO - Processing resume 687562460d8ee0637edb168a
+2025-07-15 01:02:39,982 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752523333/resumes/resume_6875108e90f502d6c5cccf00_1752523331940
+2025-07-15 01:02:40,791 - __main__ - INFO - Parsing resume sections for 687562460d8ee0637edb168a
+2025-07-15 01:02:42,816 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 01:02:42,888 - db - INFO - Resume 687562460d8ee0637edb168a updated successfully
+2025-07-15 01:02:42,888 - __main__ - INFO - Generating embedding for 687562460d8ee0637edb168a
+2025-07-15 01:02:43,030 - db - INFO - Embedding saved for resume 687562460d8ee0637edb168a
+2025-07-15 01:02:43,031 - __main__ - INFO - Finding job matches for 687562460d8ee0637edb168a
+2025-07-15 01:02:43,162 - matcher - WARNING - No jobs found in database
+2025-07-15 01:02:43,163 - __main__ - INFO - Successfully processed resume 687562460d8ee0637edb168a in 3.24 seconds
+2025-07-15 01:02:43,163 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 01:02:43,164 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 01:02:43,228 - db - INFO - Database connection closed
+2025-07-15 01:02:43,228 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 01:08:31,513 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 01:08:31,585 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 01:08:31,586 - __main__ - INFO - Processing resume 687563790d8ee0637edb175b
+2025-07-15 01:08:31,651 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752523640/resumes/resume_6875108e90f502d6c5cccf00_1752523639314
+2025-07-15 01:08:32,482 - __main__ - INFO - Parsing resume sections for 687563790d8ee0637edb175b
+2025-07-15 01:08:33,649 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 01:08:33,721 - db - INFO - Resume 687563790d8ee0637edb175b updated successfully
+2025-07-15 01:08:33,722 - __main__ - INFO - Generating embedding for 687563790d8ee0637edb175b
+2025-07-15 01:08:33,844 - db - INFO - Embedding saved for resume 687563790d8ee0637edb175b
+2025-07-15 01:08:33,844 - __main__ - INFO - Finding job matches for 687563790d8ee0637edb175b
+2025-07-15 01:08:33,976 - matcher - WARNING - No jobs found in database
+2025-07-15 01:08:33,978 - __main__ - INFO - Successfully processed resume 687563790d8ee0637edb175b in 2.39 seconds
+2025-07-15 01:08:33,978 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 01:08:33,978 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 01:08:34,043 - db - INFO - Database connection closed
+2025-07-15 01:08:34,044 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 01:36:08,679 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 01:36:08,743 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 01:36:08,743 - __main__ - INFO - Processing resume 687566160d8ee0637edb2010
+2025-07-15 01:36:08,812 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752524309/resumes/resume_6875108e90f502d6c5cccf00_1752524308775
+2025-07-15 01:36:09,618 - __main__ - INFO - Parsing resume sections for 687566160d8ee0637edb2010
+2025-07-15 01:36:10,639 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 01:36:10,710 - db - INFO - Resume 687566160d8ee0637edb2010 updated successfully
+2025-07-15 01:36:10,710 - __main__ - INFO - Generating embedding for 687566160d8ee0637edb2010
+2025-07-15 01:36:10,843 - db - INFO - Embedding saved for resume 687566160d8ee0637edb2010
+2025-07-15 01:36:10,843 - __main__ - INFO - Finding job matches for 687566160d8ee0637edb2010
+2025-07-15 01:36:10,977 - matcher - WARNING - No jobs found in database
+2025-07-15 01:36:10,977 - __main__ - INFO - Successfully processed resume 687566160d8ee0637edb2010 in 2.23 seconds
+2025-07-15 01:36:10,977 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 01:36:10,978 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 01:36:11,042 - db - INFO - Database connection closed
+2025-07-15 01:36:11,042 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 01:59:26,286 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 01:59:26,350 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 01:59:26,350 - __main__ - INFO - Processing resume 68756f800d8ee0637edb2ed6
+2025-07-15 01:59:26,414 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752526719/resumes/resume_6875108e90f502d6c5cccf00_1752526718469
+2025-07-15 01:59:27,476 - __main__ - INFO - Parsing resume sections for 68756f800d8ee0637edb2ed6
+2025-07-15 01:59:28,689 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 01:59:28,768 - db - INFO - Resume 68756f800d8ee0637edb2ed6 updated successfully
+2025-07-15 01:59:28,768 - __main__ - INFO - Generating embedding for 68756f800d8ee0637edb2ed6
+2025-07-15 01:59:28,879 - db - INFO - Embedding saved for resume 68756f800d8ee0637edb2ed6
+2025-07-15 01:59:28,879 - __main__ - INFO - Finding job matches for 68756f800d8ee0637edb2ed6
+2025-07-15 01:59:29,025 - matcher - WARNING - No jobs found in database
+2025-07-15 01:59:29,025 - __main__ - INFO - Successfully processed resume 68756f800d8ee0637edb2ed6 in 2.67 seconds
+2025-07-15 01:59:29,025 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 01:59:29,025 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 01:59:29,101 - db - INFO - Database connection closed
+2025-07-15 01:59:29,101 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 18:03:00,486 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 18:03:00,560 - __main__ - INFO - No pending resumes found
+2025-07-15 18:03:00,560 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 0}
+2025-07-15 18:03:00,630 - db - INFO - Database connection closed
+2025-07-15 18:03:00,635 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 18:23:27,807 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 18:23:27,887 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 18:23:27,887 - __main__ - INFO - Processing resume 6876556299c8acb439b7d051
+2025-07-15 18:23:27,961 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752585570/resumes/resume_686ec1ac6029c36104828704_1752585567248
+2025-07-15 18:23:30,496 - __main__ - INFO - Parsing resume sections for 6876556299c8acb439b7d051
+2025-07-15 18:23:31,916 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 18:23:32,025 - db - INFO - Resume 6876556299c8acb439b7d051 updated successfully
+2025-07-15 18:23:32,026 - __main__ - INFO - Generating embedding for 6876556299c8acb439b7d051
+2025-07-15 18:23:32,237 - db - INFO - Embedding saved for resume 6876556299c8acb439b7d051
+2025-07-15 18:23:32,237 - __main__ - INFO - Finding job matches for 6876556299c8acb439b7d051
+2025-07-15 18:23:32,386 - matcher - WARNING - No jobs found in database
+2025-07-15 18:23:32,498 - __main__ - INFO - Successfully processed resume 6876556299c8acb439b7d051 in 4.61 seconds
+2025-07-15 18:23:32,498 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 18:23:32,498 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 18:23:32,586 - db - INFO - Database connection closed
+2025-07-15 18:23:32,586 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 18:30:19,703 - __main__ - INFO - Processing job embeddings (limit: 100)
+2025-07-15 18:30:19,780 - __main__ - INFO - No jobs found
+2025-07-15 18:30:19,781 - __main__ - INFO - Job processing results: {'processed': 0, 'failed': 0}
+2025-07-15 18:30:19,879 - db - INFO - Database connection closed
+2025-07-15 18:30:19,880 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 18:42:30,550 - __main__ - INFO - Processing job embeddings (limit: 100)
+2025-07-15 18:42:30,759 - db - INFO - Embedding saved for job 68743d2a24e2e3c6528070ac
+2025-07-15 18:42:30,759 - __main__ - INFO - Generated embedding for job 68743d2a24e2e3c6528070ac
+2025-07-15 18:42:30,861 - db - INFO - Embedding saved for job 687446ff8359dcc0fd22caf4
+2025-07-15 18:42:30,861 - __main__ - INFO - Generated embedding for job 687446ff8359dcc0fd22caf4
+2025-07-15 18:42:30,966 - db - INFO - Embedding saved for job 68755a328f2d54260a967998
+2025-07-15 18:42:30,966 - __main__ - INFO - Generated embedding for job 68755a328f2d54260a967998
+2025-07-15 18:42:30,966 - __main__ - INFO - Job processing complete: 3 processed, 0 failed
+2025-07-15 18:42:30,968 - __main__ - INFO - Job processing results: {'processed': 3, 'failed': 0, 'total': 3}
+2025-07-15 18:42:31,062 - db - INFO - Database connection closed
+2025-07-15 18:42:31,062 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 19:02:28,397 - __main__ - INFO - Processing job embeddings (limit: 100)
+2025-07-15 19:02:28,620 - __main__ - INFO - Job processing complete: 0 processed, 0 failed
+2025-07-15 19:02:28,620 - __main__ - INFO - Job processing results: {'processed': 0, 'failed': 0, 'total': 3}
+2025-07-15 19:02:28,685 - db - INFO - Database connection closed
+2025-07-15 19:02:28,685 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 19:05:15,809 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 19:05:15,945 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 19:05:15,945 - __main__ - INFO - Processing resume 68765f63e629685330d5f7a8
+2025-07-15 19:05:16,042 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752588130/resumes/resume_686ec1ac6029c36104828704_1752588127482
+2025-07-15 19:05:19,016 - __main__ - INFO - Parsing resume sections for 68765f63e629685330d5f7a8
+2025-07-15 19:05:20,390 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 19:05:20,521 - db - INFO - Resume 68765f63e629685330d5f7a8 updated successfully
+2025-07-15 19:05:20,521 - __main__ - INFO - Generating embedding for 68765f63e629685330d5f7a8
+2025-07-15 19:05:20,648 - db - INFO - Embedding saved for resume 68765f63e629685330d5f7a8
+2025-07-15 19:05:20,648 - __main__ - INFO - Finding job matches for 68765f63e629685330d5f7a8
+2025-07-15 19:05:21,725 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2025-07-15 19:05:21,725 - matcher - ERROR - Groq LLM error: Error code: 413 - {'error': {'message': 'Request too large for model `llama3-70b-8192` in organization `org_01jhnhf5cneppvrbwyrsmr65kg` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7168, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-15 19:05:21,725 - matcher - INFO - Matched 0 jobs for resume 68765f63e629685330d5f7a8
+2025-07-15 19:05:21,883 - db - INFO - Saved 0 matches for resume 68765f63e629685330d5f7a8 (user: 686ec1ac6029c36104828704)
+2025-07-15 19:05:21,883 - matcher - INFO - Saved 0 matches for resume 68765f63e629685330d5f7a8 (user: 686ec1ac6029c36104828704)
+2025-07-15 19:05:21,889 - __main__ - INFO - Successfully processed resume 68765f63e629685330d5f7a8 in 5.94 seconds
+2025-07-15 19:05:21,893 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 19:05:21,893 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 19:05:21,980 - db - INFO - Database connection closed
+2025-07-15 19:05:21,980 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 21:01:39,448 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 21:01:39,724 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 21:01:39,724 - __main__ - INFO - Processing resume 68767b190256e3bf52c3748e
+2025-07-15 21:01:40,117 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752595224/resumes/resume_686ec1ac6029c36104828704_1752595221811
+2025-07-15 21:01:44,491 - __main__ - INFO - Parsing resume sections for 68767b190256e3bf52c3748e
+2025-07-15 21:01:46,159 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 21:01:46,362 - db - INFO - Resume 68767b190256e3bf52c3748e updated successfully
+2025-07-15 21:01:46,362 - __main__ - INFO - Generating embedding for 68767b190256e3bf52c3748e
+2025-07-15 21:01:46,902 - db - INFO - Embedding saved for resume 68767b190256e3bf52c3748e
+2025-07-15 21:01:46,902 - __main__ - ERROR - Error processing resume 68767b190256e3bf52c3748e: 'DatabaseManager' object has no attribute 'get_jobs_without_embedding'
+2025-07-15 21:01:47,184 - db - INFO - Resume 68767b190256e3bf52c3748e updated successfully
+2025-07-15 21:01:47,184 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-15 21:01:47,184 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-15 21:01:47,382 - db - INFO - Database connection closed
+2025-07-15 21:01:47,382 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 21:14:25,598 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 21:14:25,856 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 21:14:25,856 - __main__ - INFO - Processing resume 68767e4da36874437aa70436
+2025-07-15 21:14:26,067 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/image/upload/v1752596044/resumes/resume_686ec1ac6029c36104828704_1752596041304.pdf
+2025-07-15 21:14:26,789 - __main__ - INFO - Parsing resume sections for 68767e4da36874437aa70436
+2025-07-15 21:14:28,123 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 21:14:28,315 - db - INFO - Resume 68767e4da36874437aa70436 updated successfully
+2025-07-15 21:14:28,315 - __main__ - INFO - Generating embedding for 68767e4da36874437aa70436
+2025-07-15 21:14:28,315 - embedding - WARNING - No text content found for embedding generation
+2025-07-15 21:14:28,325 - __main__ - INFO - Successfully processed resume 68767e4da36874437aa70436 in 2.47 seconds
+2025-07-15 21:14:28,325 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 21:14:28,325 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 21:14:28,638 - db - INFO - Database connection closed
+2025-07-15 21:14:28,638 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 21:22:03,378 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 21:22:03,446 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 21:22:03,446 - __main__ - INFO - Processing resume 68767ffaa36874437aa706cc
+2025-07-15 21:22:03,811 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/image/upload/v1752596473/resumes/resume_686ec1ac6029c36104828704_1752596472635.pdf
+2025-07-15 21:22:04,367 - __main__ - INFO - Parsing resume sections for 68767ffaa36874437aa706cc
+2025-07-15 21:22:06,304 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 21:22:06,369 - db - INFO - Resume 68767ffaa36874437aa706cc updated successfully
+2025-07-15 21:22:06,369 - __main__ - INFO - Generating embedding for 68767ffaa36874437aa706cc
+2025-07-15 21:22:06,369 - embedding - WARNING - No text content found for embedding generation
+2025-07-15 21:22:06,369 - __main__ - INFO - Successfully processed resume 68767ffaa36874437aa706cc in 2.92 seconds
+2025-07-15 21:22:06,369 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 21:22:06,369 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 21:22:06,433 - db - INFO - Database connection closed
+2025-07-15 21:22:06,433 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 21:26:26,349 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 21:26:26,416 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 21:26:26,424 - __main__ - INFO - Processing resume 68768113d3e8a8522770febf
+2025-07-15 21:26:26,488 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752596754/resumes/resume_686ec1ac6029c36104828704_1752596751882.pdf
+2025-07-15 21:26:27,386 - __main__ - INFO - Parsing resume sections for 68768113d3e8a8522770febf
+2025-07-15 21:26:28,706 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 21:26:28,790 - db - INFO - Resume 68768113d3e8a8522770febf updated successfully
+2025-07-15 21:26:28,790 - __main__ - INFO - Generating embedding for 68768113d3e8a8522770febf
+2025-07-15 21:26:28,790 - embedding - WARNING - No text content found for embedding generation
+2025-07-15 21:26:28,790 - __main__ - INFO - Successfully processed resume 68768113d3e8a8522770febf in 2.37 seconds
+2025-07-15 21:26:28,790 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 21:26:28,790 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 21:26:28,907 - db - INFO - Database connection closed
+2025-07-15 21:26:28,907 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 21:45:04,734 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-15 21:45:04,965 - __main__ - INFO - Found 1 pending resumes
+2025-07-15 21:45:04,974 - __main__ - INFO - Processing resume 687685654168d0916a8d859f
+2025-07-15 21:45:05,174 - __main__ - INFO - Extracting text from https://res.cloudinary.com/dqa2xbt7x/raw/upload/v1752597859/resumes/resume_686ec1ac6029c36104828704_1752597856072
+2025-07-15 21:45:06,914 - __main__ - INFO - Parsing resume sections for 687685654168d0916a8d859f
+2025-07-15 21:45:08,864 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 21:45:09,164 - db - INFO - Resume 687685654168d0916a8d859f updated successfully
+2025-07-15 21:45:09,164 - __main__ - INFO - Generating embedding for 687685654168d0916a8d859f
+2025-07-15 21:45:09,579 - db - INFO - Embedding saved for resume 687685654168d0916a8d859f
+2025-07-15 21:45:09,784 - __main__ - INFO - Finding job matches for 687685654168d0916a8d859f
+2025-07-15 21:45:11,368 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2025-07-15 21:45:11,368 - matcher - ERROR - Groq LLM error: Error code: 413 - {'error': {'message': 'Request too large for model `llama3-70b-8192` in organization `org_01jhnhf5cneppvrbwyrsmr65kg` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7168, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-15 21:45:11,373 - matcher - INFO - Matched 0 jobs for resume 687685654168d0916a8d859f
+2025-07-15 21:45:11,734 - db - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-15 21:45:11,734 - matcher - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-15 21:45:11,743 - __main__ - INFO - Successfully processed resume 687685654168d0916a8d859f in 6.77 seconds
+2025-07-15 21:45:11,744 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-15 21:45:11,744 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-15 21:45:11,934 - db - INFO - Database connection closed
+2025-07-15 21:45:11,938 - __main__ - INFO - AI Engine shutdown complete
+2025-07-15 23:40:01,660 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2025-07-15 23:40:01,660 - matcher - ERROR - Groq LLM error: Error code: 413 - {'error': {'message': 'Request too large for model `llama3-70b-8192` in organization `org_01jhnhf5cneppvrbwyrsmr65kg` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7168, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-15 23:40:01,660 - matcher - INFO - Matched 0 jobs for resume 687685654168d0916a8d859f
+2025-07-15 23:40:01,804 - db - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-15 23:40:01,804 - matcher - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-15 23:40:01,877 - db - INFO - Database connection closed
+2025-07-15 23:40:01,879 - __main__ - INFO - AI Engine shutdown complete
+2025-07-16 00:25:21,017 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2025-07-16 00:25:21,019 - matcher - ERROR - Groq LLM error: Error code: 413 - {'error': {'message': 'Request too large for model `llama3-70b-8192` in organization `org_01jhnhf5cneppvrbwyrsmr65kg` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7168, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-16 00:25:21,020 - matcher - INFO - Matched 0 jobs for resume 687685654168d0916a8d859f
+2025-07-16 00:25:21,098 - db - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-16 00:25:21,098 - matcher - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-16 00:25:21,162 - db - INFO - Database connection closed
+2025-07-16 00:25:21,162 - __main__ - INFO - AI Engine shutdown complete
+2025-07-16 00:28:33,382 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 00:28:33,401 - matcher - ERROR - Groq LLM error: unterminated string literal (detected at line 1) (<string>, line 1)
+2025-07-16 00:28:33,401 - matcher - INFO - Matched 0 jobs for resume 687685654168d0916a8d859f
+2025-07-16 00:28:33,481 - db - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-16 00:28:33,481 - matcher - INFO - Saved 0 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-16 00:28:33,576 - db - INFO - Database connection closed
+2025-07-16 00:28:33,586 - __main__ - INFO - AI Engine shutdown complete
+2025-07-16 00:50:27,677 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 00:50:27,695 - matcher - INFO - Groq Match Result: After analyzing the resume and job descriptions, I've matched the most relevant jobs for the candidate. Here are the top 5 matches:
+
+[
+  {
+    "job_id": "68743d2a24e2e3c6528070ac",
+    "reason": "The candidate has MERN Stack listed as a skill, and the job description specifically requires a MERN Stack developer."
+  },
+  {
+    "job_id": None,
+    "reason": "Although there isn't a perfect match, the candidate has Frontend Development and WordPress skills, which could be relevant to a PHP development role."
+  },
+  {
+    "job_id": None,
+    "reason": "The candidate has experience with Site Reliability Engineering (SRE) and has a certification in Google SRE Culture, which could be relevant to a Cyber Security role, although it's not a direct match."
+  },
+  {
+    "job_id": None,
+    "reason": "The candidate has a strong background in software development, AI-driven solutions, and web technologies, which could make them a good fit for a general software development role, although no specific job matches this description."
+  },
+  {
+    "job_id": None,
+    "reason": "The candidate has experience with AWS Cloud Computing, which could be relevant to various cloud-related roles, although no specific job matches this description."
+  }
+]
+
+Note that only one job matches the candidate's skills and experience directly (MERN Stack Dev). The other matches are indirect, but still relevant.
+2025-07-16 00:50:27,702 - matcher - INFO - Matched 1 jobs for resume 687685654168d0916a8d859f
+2025-07-16 00:50:27,704 - matcher - INFO -  Attempting to save 1 matches for resume 687685654168d0916a8d859f and user 686ec1ac6029c36104828704
+2025-07-16 00:50:27,773 - db - INFO - Saved 1 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-16 00:50:27,773 - matcher - INFO - Saved 1 matches for resume 687685654168d0916a8d859f (user: 686ec1ac6029c36104828704)
+2025-07-16 00:50:27,853 - db - INFO - Database connection closed
+2025-07-16 00:50:27,853 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 12:15:00,066 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 12:15:00,133 - __main__ - INFO - Found 3 pending resumes
+2025-07-17 12:15:00,133 - __main__ - INFO - Processing resume 68783b1e8fe7f6a7178f5155
+2025-07-17 12:15:00,202 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Hassan_Nawaz_CV_1752711388398_4759.pdf
+2025-07-17 12:15:00,216 - __main__ - INFO - Parsing resume sections for 68783b1e8fe7f6a7178f5155
+2025-07-17 12:15:01,293 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 12:15:01,371 - db - INFO - Resume 68783b1e8fe7f6a7178f5155 updated successfully
+2025-07-17 12:15:01,371 - __main__ - INFO - Generating embedding for 68783b1e8fe7f6a7178f5155
+2025-07-17 12:15:01,375 - embedding - WARNING - No text content found for embedding generation
+2025-07-17 12:15:01,375 - __main__ - INFO - Successfully processed resume 68783b1e8fe7f6a7178f5155 in 1.24 seconds
+2025-07-17 12:15:01,376 - __main__ - INFO - Processing resume 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:01,438 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad_Asad_Cv(cyber)_1752710127825_8496.pdf
+2025-07-17 12:15:01,714 - __main__ - INFO - Parsing resume sections for 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:03,646 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 12:15:03,711 - db - INFO - Resume 68783bcf8fe7f6a7178f5156 updated successfully
+2025-07-17 12:15:03,711 - __main__ - INFO - Generating embedding for 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:03,975 - db - INFO - Embedding saved for resume 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:04,041 - __main__ - INFO - Generating embeddings for 2 new jobs...
+2025-07-17 12:15:04,041 - embedding - ERROR - Error generating job embedding: 'str' object has no attribute 'get'
+2025-07-17 12:15:04,110 - db - INFO - Embedding saved for job 6876876a1e3b02a3a455905a
+2025-07-17 12:15:04,110 - embedding - ERROR - Error generating job embedding: 'str' object has no attribute 'get'
+2025-07-17 12:15:04,176 - db - INFO - Embedding saved for job 6876bf95ee0ba5b49ebfe8a5
+2025-07-17 12:15:04,176 - __main__ - INFO - Finding job matches for 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:05,266 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 12:15:05,275 - matcher - INFO - Groq Match Result: Based on the resume, here are the top 5 job matches:
+
+[
+  {
+    "job_id": "68755a328f2d54260a967998",
+    "reason": "The job title 'Cyber Security' directly matches the candidate's skills in Cybersecurity & Risk Assessment, ISO 27001, NIST RMF, Penetration Testing, and GRC."
+  }
+]
+
+Note: The other job postings do not match the candidate's skills and experience. The candidate has a strong background in cybersecurity and cloud security, but the other job postings are for MERN Stack development and PHP development, which are not relevant to the candidate's skills.
+2025-07-17 12:15:05,275 - matcher - INFO - Matched 1 jobs for resume 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:05,275 - matcher - INFO -  Attempting to save 1 matches for resume 68783bcf8fe7f6a7178f5156 and user 6875108e90f502d6c5cccf00
+2025-07-17 12:15:05,342 - db - INFO - Saved 1 matches for resume 68783bcf8fe7f6a7178f5156 (user: 6875108e90f502d6c5cccf00)
+2025-07-17 12:15:05,342 - matcher - INFO - Saved 1 matches for resume 68783bcf8fe7f6a7178f5156 (user: 6875108e90f502d6c5cccf00)
+2025-07-17 12:15:05,427 - __main__ - INFO - Found 1 matches for 68783bcf8fe7f6a7178f5156
+2025-07-17 12:15:05,427 - __main__ - ERROR - Error processing resume 68783bcf8fe7f6a7178f5156: DatabaseManager.save_matches_with_user() got an unexpected keyword argument 'matches'
+2025-07-17 12:15:05,493 - db - INFO - Resume 68783bcf8fe7f6a7178f5156 updated successfully
+2025-07-17 12:15:05,493 - __main__ - INFO - Processing resume 687881098fe7f6a7178f5157
+2025-07-17 12:15:05,560 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Anas-Jamil-_1752727815646_7920.pdf
+2025-07-17 12:15:05,604 - __main__ - INFO - Parsing resume sections for 687881098fe7f6a7178f5157
+2025-07-17 12:15:06,719 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 12:15:06,784 - db - INFO - Resume 687881098fe7f6a7178f5157 updated successfully
+2025-07-17 12:15:06,784 - __main__ - INFO - Generating embedding for 687881098fe7f6a7178f5157
+2025-07-17 12:15:06,896 - db - INFO - Embedding saved for resume 687881098fe7f6a7178f5157
+2025-07-17 12:15:06,966 - __main__ - INFO - Finding job matches for 687881098fe7f6a7178f5157
+2025-07-17 12:15:08,151 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 12:15:08,153 - matcher - INFO - Groq Match Result: After analyzing the resume and job descriptions, I've found no direct matches for the candidate's skills and experience. However, considering the candidate's passion for digital marketing and their skills in social media platforms, I've identified a few potential matches that might be relevant:
+
+[
+  {
+    "job_id": null,
+    "reason": "Although there are no direct matches, the candidate's skills in social media platforms and strong communication skills might be valuable in a digital marketing role. Unfortunately, there are no digital marketing job openings in the provided list."
+  }
+]
+
+Since there are no job openings that directly match the candidate's skills and experience, I couldn't provide a list of matching jobs. If you'd like to add more job openings or provide more context, I'd be happy to help further!
+2025-07-17 12:15:08,175 - matcher - INFO - Matched 0 jobs for resume 687881098fe7f6a7178f5157
+2025-07-17 12:15:08,175 - matcher - INFO -  Attempting to save 0 matches for resume 687881098fe7f6a7178f5157 and user 6878805ad66483ae4399f1a1
+2025-07-17 12:15:08,252 - db - INFO - Saved 0 matches for resume 687881098fe7f6a7178f5157 (user: 6878805ad66483ae4399f1a1)
+2025-07-17 12:15:08,252 - matcher - INFO - Saved 0 matches for resume 687881098fe7f6a7178f5157 (user: 6878805ad66483ae4399f1a1)
+2025-07-17 12:15:08,254 - __main__ - INFO - Successfully processed resume 687881098fe7f6a7178f5157 in 2.76 seconds
+2025-07-17 12:15:08,254 - __main__ - INFO - Batch processing complete: 2 processed, 1 failed
+2025-07-17 12:15:08,257 - __main__ - INFO - Batch processing results: {'processed': 2, 'failed': 1, 'total': 3}
+2025-07-17 12:15:08,323 - db - INFO - Database connection closed
+2025-07-17 12:15:08,323 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 13:09:20,675 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 13:09:20,745 - __main__ - INFO - No pending resumes found
+2025-07-17 13:09:20,745 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 0}
+2025-07-17 13:09:20,813 - db - INFO - Database connection closed
+2025-07-17 13:09:20,813 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 14:30:44,071 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 14:30:44,144 - __main__ - INFO - No pending resumes found
+2025-07-17 14:30:44,144 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 0}
+2025-07-17 14:30:44,209 - db - INFO - Database connection closed
+2025-07-17 14:30:44,209 - __main__ - INFO - AI Engine shutdown complete

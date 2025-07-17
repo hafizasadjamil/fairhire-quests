@@ -1,0 +1,255 @@
+2025-07-17 16:24:56,084 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 16:24:56,162 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 16:24:56,162 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 16:24:56,225 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Abdullah_CV_1752751467576_3646.pdf
+2025-07-17 16:24:56,511 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 16:24:59,058 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 16:24:59,147 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 16:24:59,149 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 16:24:59,437 - db - INFO - Embedding saved for resume 6878ce508fe7f6a7178f5170
+2025-07-17 16:24:59,504 - __main__ - INFO - Generating embeddings for 1 new jobs...
+2025-07-17 16:24:59,504 - embedding - ERROR - Error generating job embedding: 'str' object has no attribute 'get'
+2025-07-17 16:24:59,576 - db - INFO - Embedding saved for job 6878aa937a660cc518c39f53
+2025-07-17 16:24:59,576 - __main__ - INFO - Finding job matches for 6878ce508fe7f6a7178f5170
+2025-07-17 16:25:01,031 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 16:25:01,031 - matcher - INFO - Groq Match Result: After analyzing the resume and the job postings, I've matched the most relevant jobs to the candidate's skills and experience. Here are the top 5 matches:
+
+[
+  {
+    "job_id": "68743d2a24e2e3c6528070ac",
+    "reason": "The job requires a MERN Stack dev, but the candidate has expertise in React JS, which is a key technology in the MERN stack. Although the candidate doesn't have direct experience with the entire MERN stack, their React JS skills make them a strong candidate for this role."
+  }
+]
+
+Note that there are no other matches that closely align with the candidate's skills and experience. The other job postings require skills in Cyber Security, PHP, or other technologies that are not mentioned in the candidate's resume.
+2025-07-17 16:25:01,031 - matcher - INFO - Matched 1 jobs for resume 6878ce508fe7f6a7178f5170
+2025-07-17 16:25:01,031 - matcher - INFO -  Attempting to save 1 matches for resume 6878ce508fe7f6a7178f5170 and user 6878cd1e4e84bd4d40ad628a
+2025-07-17 16:25:01,120 - db - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 16:25:01,120 - matcher - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 16:25:01,208 - __main__ - INFO - Found 1 matches for 6878ce508fe7f6a7178f5170
+2025-07-17 16:25:01,208 - __main__ - ERROR - Error processing resume 6878ce508fe7f6a7178f5170: DatabaseManager.save_matches_with_user() got an unexpected keyword argument 'matches'
+2025-07-17 16:25:01,274 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 16:25:01,274 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-17 16:25:01,274 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-17 16:25:01,339 - db - INFO - Database connection closed
+2025-07-17 16:25:01,355 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 16:38:08,499 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 16:38:08,555 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 16:38:08,555 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 16:38:08,620 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752752278525_2693.pdf
+2025-07-17 16:38:08,969 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 16:38:11,488 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 16:38:11,567 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 16:38:11,567 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 16:38:11,568 - embedding - ERROR - Error generating resume embedding: sequence item 0: expected str instance, dict found
+2025-07-17 16:38:11,568 - __main__ - INFO - Successfully processed resume 6878ce508fe7f6a7178f5170 in 3.01 seconds
+2025-07-17 16:38:11,568 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-17 16:38:11,568 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-17 16:38:11,644 - db - INFO - Database connection closed
+2025-07-17 16:38:11,644 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 17:04:54,410 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 17:04:54,472 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 17:04:54,472 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:04:54,542 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752753886460_8471.pdf
+2025-07-17 17:04:54,862 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 17:04:56,429 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 17:04:56,505 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 17:04:56,506 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:04:56,565 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752753886460_8471.pdf
+2025-07-17 17:04:56,930 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 17:04:58,124 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:04:58,214 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:04:58,215 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 17:04:58,215 - embedding - ERROR - Error generating resume embedding: sequence item 0: expected str instance, dict found
+2025-07-17 17:04:58,216 - __main__ - INFO - Successfully processed resume 6878ce508fe7f6a7178f5170 in 3.74 seconds
+2025-07-17 17:04:58,216 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-17 17:04:58,216 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-17 17:04:58,274 - db - INFO - Database connection closed
+2025-07-17 17:04:58,274 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 17:04:59,284 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:04:59,365 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:04:59,365 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 17:04:59,365 - embedding - ERROR - Error generating resume embedding: sequence item 0: expected str instance, dict found
+2025-07-17 17:04:59,365 - __main__ - INFO - Successfully processed resume 6878ce508fe7f6a7178f5170 in 2.86 seconds
+2025-07-17 17:04:59,365 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-17 17:04:59,365 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-17 17:04:59,444 - db - INFO - Database connection closed
+2025-07-17 17:04:59,444 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 17:21:55,010 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 17:21:55,076 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 17:21:55,076 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:21:55,147 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752754900609_2280.pdf
+2025-07-17 17:21:55,714 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 17:21:58,852 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:21:58,925 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:21:58,925 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 17:21:58,925 - embedding - ERROR - Error generating resume embedding: sequence item 0: expected str instance, dict found
+2025-07-17 17:21:58,925 - __main__ - INFO - Successfully processed resume 6878ce508fe7f6a7178f5170 in 3.85 seconds
+2025-07-17 17:21:58,925 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-17 17:21:58,925 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-17 17:21:58,998 - db - INFO - Database connection closed
+2025-07-17 17:21:58,998 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 17:49:26,438 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 17:49:26,514 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 17:49:26,514 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:26,579 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Abdullah_CV_1752756549155_2652.pdf
+2025-07-17 17:49:26,902 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:28,916 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:49:28,993 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:49:28,993 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:29,149 - db - INFO - Embedding saved for resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:29,215 - __main__ - INFO - Finding job matches for 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:30,889 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:49:30,889 - matcher - INFO - Groq Match Result: After analyzing the resume and job descriptions, I've found the following matches:
+
+[
+  {
+    "job_id": "68743d2a24e2e3c6528070ac",
+    "reason": "The job requires a MERN Stack dev, and although the candidate's skills are more focused on React JS and Django, they have experience with JavaScript, which is a key component of the MERN Stack."
+  }
+]
+
+Note that there are no other jobs that closely match the candidate's skills and experience. The Cyber Security and PHP Dev jobs require specific skills that are not mentioned in the candidate's resume.
+2025-07-17 17:49:30,896 - matcher - INFO - Matched 1 jobs for resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:30,897 - matcher - INFO -  Attempting to save 1 matches for resume 6878ce508fe7f6a7178f5170 and user 6878cd1e4e84bd4d40ad628a
+2025-07-17 17:49:30,970 - db - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 17:49:30,970 - matcher - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 17:49:30,981 - __main__ - INFO - Found 1 matches for 6878ce508fe7f6a7178f5170
+2025-07-17 17:49:30,983 - __main__ - ERROR - Error processing resume 6878ce508fe7f6a7178f5170: DatabaseManager.save_matches_with_user() got an unexpected keyword argument 'matches'
+2025-07-17 17:49:31,061 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:49:31,061 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-17 17:49:31,061 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-17 17:49:31,132 - db - INFO - Database connection closed
+2025-07-17 17:49:31,132 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 17:59:03,320 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 17:59:03,385 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 17:59:03,385 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:03,449 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Abdullah_CV_1752757126686_8090.pdf
+2025-07-17 17:59:03,749 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:05,730 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:59:05,795 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:59:05,795 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:05,937 - db - INFO - Embedding saved for resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:06,002 - __main__ - INFO - Finding job matches for 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:07,161 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:59:07,161 - matcher - INFO - Groq Match Result: After analyzing the resume and the job postings, I've come up with the following matches:
+
+[
+  {
+    "job_id": "68743d2a24e2e3c6528070ac",
+    "reason": "The job requires a MERN Stack dev, and although the candidate's skills are more focused on React JS and Django, they have experience with JavaScript which is a crucial part of the MERN stack."
+  }
+]
+
+Note that there are no other matches that align closely with the candidate's skills and experience. The other job postings are for Cyber Security and PHP development, which are not relevant to the candidate's background.
+2025-07-17 17:59:07,161 - matcher - INFO - Matched 1 jobs for resume 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:07,161 - matcher - INFO -  Attempting to save 1 matches for resume 6878ce508fe7f6a7178f5170 and user 6878cd1e4e84bd4d40ad628a
+2025-07-17 17:59:07,224 - db - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 17:59:07,224 - matcher - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 17:59:07,240 - __main__ - INFO - Found 1 matches for 6878ce508fe7f6a7178f5170
+2025-07-17 17:59:07,240 - __main__ - ERROR - Error processing resume 6878ce508fe7f6a7178f5170: DatabaseManager.save_matches_with_user() got an unexpected keyword argument 'matches'
+2025-07-17 17:59:07,304 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 17:59:07,304 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-17 17:59:07,304 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-17 17:59:07,377 - db - INFO - Database connection closed
+2025-07-17 17:59:07,377 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 18:02:36,607 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 18:02:36,673 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 18:02:36,673 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:36,735 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Abdullah_CV_1752757341758_1507.pdf
+2025-07-17 18:02:36,934 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:38,617 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 18:02:38,685 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 18:02:38,685 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:38,792 - db - INFO - Embedding saved for resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:38,856 - __main__ - INFO - Finding job matches for 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:40,718 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 18:02:40,734 - matcher - INFO - Groq Match Result: Based on the resume and job descriptions, here are the top 5 job matches:
+
+[
+  {
+    "job_id": "68743d2a24e2e3c6528070ac",
+    "reason": "The job requires a MERN Stack dev, and although the resume doesn't explicitly mention MERN, it does highlight expertise in React JS, which is a key component of the MERN stack."
+  }
+]
+
+Note: Unfortunately, there are no other jobs that closely match the skills and experience mentioned in the resume. The other jobs require different skill sets (Cyber Security, PHP Dev) that are not mentioned in the resume.
+2025-07-17 18:02:40,734 - matcher - INFO - Matched 1 jobs for resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:40,734 - matcher - INFO -  Attempting to save 1 matches for resume 6878ce508fe7f6a7178f5170 and user 6878cd1e4e84bd4d40ad628a
+2025-07-17 18:02:40,799 - db - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 18:02:40,799 - matcher - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 18:02:40,815 - __main__ - INFO - Found 1 matches for 6878ce508fe7f6a7178f5170
+2025-07-17 18:02:40,815 - __main__ - ERROR - Error processing resume 6878ce508fe7f6a7178f5170: DatabaseManager.save_matches_with_user() got an unexpected keyword argument 'matches'
+2025-07-17 18:02:40,887 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 18:02:40,887 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-17 18:02:40,887 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-17 18:02:40,946 - db - INFO - Database connection closed
+2025-07-17 18:02:40,946 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 18:05:49,607 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 18:05:49,689 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 18:05:49,689 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:49,755 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Abdullah_CV_1752757533262_6559.pdf
+2025-07-17 18:05:50,080 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:51,762 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 18:05:51,828 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 18:05:51,828 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:51,970 - db - INFO - Embedding saved for resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:52,034 - __main__ - INFO - Finding job matches for 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:53,696 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 18:05:53,698 - matcher - INFO - Groq Match Result: After analyzing the resume and job descriptions, I've matched the resume to the most relevant jobs. Here are the top 5 matches:
+
+[
+  {
+    "job_id": "68743d2a24e2e3c6528070ac",
+    "reason": "The job requires a MERN Stack dev, and although the resume doesn't explicitly mention MERN, the candidate has experience with React JS, which is a key component of the MERN stack."
+  }
+]
+
+Note that there are no other matches that closely align with the candidate's skills and experience. The other job descriptions don't mention specific technologies or skills that match the candidate's profile.
+2025-07-17 18:05:53,700 - matcher - INFO - Matched 1 jobs for resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:53,700 - matcher - INFO -  Attempting to save 1 matches for resume 6878ce508fe7f6a7178f5170 and user 6878cd1e4e84bd4d40ad628a
+2025-07-17 18:05:53,766 - db - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 18:05:53,766 - matcher - INFO - Saved 1 matches for resume 6878ce508fe7f6a7178f5170 (user: 6878cd1e4e84bd4d40ad628a)
+2025-07-17 18:05:53,777 - __main__ - INFO - Found 1 matches for 6878ce508fe7f6a7178f5170
+2025-07-17 18:05:53,779 - __main__ - ERROR - Error processing resume 6878ce508fe7f6a7178f5170: DatabaseManager.save_matches_with_user() got an unexpected keyword argument 'matches'
+2025-07-17 18:05:53,849 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 18:05:53,849 - __main__ - INFO - Batch processing complete: 0 processed, 1 failed
+2025-07-17 18:05:53,851 - __main__ - INFO - Batch processing results: {'processed': 0, 'failed': 1, 'total': 1}
+2025-07-17 18:05:53,921 - db - INFO - Database connection closed
+2025-07-17 18:05:53,921 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 18:06:25,311 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 18:06:25,375 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 18:06:25,390 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:06:25,438 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752757570585_7435.pdf
+2025-07-17 18:06:25,938 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 18:06:28,400 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 18:06:28,472 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 18:06:28,473 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 18:06:28,473 - embedding - ERROR - Error generating resume embedding: sequence item 0: expected str instance, dict found
+2025-07-17 18:06:28,474 - __main__ - INFO - Successfully processed resume 6878ce508fe7f6a7178f5170 in 3.08 seconds
+2025-07-17 18:06:28,474 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-17 18:06:28,474 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-17 18:06:28,540 - db - INFO - Database connection closed
+2025-07-17 18:06:28,540 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 18:29:16,783 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 18:29:16,849 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 18:29:16,849 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:29:16,920 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752758943978_8233.pdf
+2025-07-17 18:29:17,399 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 18:29:20,345 - __main__ - INFO - Processing interrupted by user
+2025-07-17 18:29:20,409 - db - INFO - Database connection closed
+2025-07-17 18:29:20,409 - __main__ - INFO - AI Engine shutdown complete
+2025-07-17 18:29:55,522 - __main__ - INFO - Starting batch processing (limit: 100)
+2025-07-17 18:29:55,596 - __main__ - INFO - Found 1 pending resumes
+2025-07-17 18:29:55,597 - __main__ - INFO - Processing resume 6878ce508fe7f6a7178f5170
+2025-07-17 18:29:55,659 - __main__ - INFO - Extracting text from http://localhost:5000/uploads/Muhammad-Asad_jamil(cv)_1752758983511_7248.pdf
+2025-07-17 18:29:55,993 - __main__ - INFO - Parsing resume sections for 6878ce508fe7f6a7178f5170
+2025-07-17 18:29:59,101 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 18:29:59,165 - db - INFO - Resume 6878ce508fe7f6a7178f5170 updated successfully
+2025-07-17 18:29:59,165 - __main__ - INFO - Generating embedding for 6878ce508fe7f6a7178f5170
+2025-07-17 18:29:59,165 - embedding - ERROR - Error generating resume embedding: sequence item 0: expected str instance, dict found
+2025-07-17 18:29:59,178 - __main__ - INFO - Successfully processed resume 6878ce508fe7f6a7178f5170 in 3.57 seconds
+2025-07-17 18:29:59,178 - __main__ - INFO - Batch processing complete: 1 processed, 0 failed
+2025-07-17 18:29:59,178 - __main__ - INFO - Batch processing results: {'processed': 1, 'failed': 0, 'total': 1}
+2025-07-17 18:29:59,247 - db - INFO - Database connection closed
+2025-07-17 18:29:59,247 - __main__ - INFO - AI Engine shutdown complete

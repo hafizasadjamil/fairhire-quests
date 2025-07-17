@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anonymous Resume</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    h2 { color: #333; }
+  </style>
+</head>
+<body>
+  <h2>Candidate Overview (Anonymous)</h2>
+  <p><strong>Experience:</strong> <%= experience %></p>
+  <p><strong>Skills:</strong> <%= skills.join(', ') %></p>
+  <% if (certifications && certifications.length) { %>
+    <p><strong>Certifications:</strong> <%= certifications.join(', ') %></p>
+  <% } %>
+</body>
+</html>
