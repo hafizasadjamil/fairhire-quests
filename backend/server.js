@@ -15,8 +15,6 @@ import path from "path";
 import { fileURLToPath } from "url";
 import streamRoutes from './routes/stream.js';
 import chatRoutes from "./routes/chat.js";
-
-
 dotenv.config();
 await connectDB();
 

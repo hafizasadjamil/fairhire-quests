@@ -18,6 +18,7 @@
     "crypto-js": "^4.2.0",
     "dotenv": "^17.1.0",
     "ejs": "^3.1.10",
+    "emoji-picker-react": "^4.13.2",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.2",

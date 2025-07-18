@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Spinner from "../components/jobSeekerDashboard/Spinner";
 
 const About = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1 second delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Show spinner first
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-blue-50">
+        <Spinner />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 to-teal-50 px-6 py-12">
       <div className="max-w-5xl mx-auto space-y-10">
@@ -43,7 +63,7 @@ const About = () => {
           </ul>
         </div>
 
-        {/* 👥 Team (Optional placeholder) */}
+        {/* 👥 Team */}
         <div className="bg-white p-6 rounded-xl shadow-md text-center">
           <h2 className="text-xl font-bold text-blue-700 mb-2">👥 Meet the Team</h2>
           <p className="text-gray-600 italic">

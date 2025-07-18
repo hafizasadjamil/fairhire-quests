@@ -53,7 +53,7 @@ export default function JobSeekerDashboard() {
 
   return (
     <section className="min-h-screen bg-gradient-to-r from-blue-50 to-teal-50">
-      <main className="container px-4 py-10 space-y-10">
+      <main className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       <div className="flex justify-between items-center mb-4">
   <h1 className="text-2xl font-bold">
     Welcome, {profile?.name || "Jobseeker"} 👋

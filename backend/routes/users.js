@@ -1,4 +1,3 @@
-
 import express from 'express';
 import protect  from '../middleware/protect.js';
 import User from '../models/User.js';
@@ -38,30 +37,6 @@ router.get("/me", protect, async (req, res) => {
     res.status(500).json({ msg: "Server error in /me" });
   }
 });
-
-
-// GET /api/users/:id
-// router.get("/:id", async (req, res) => {
-//   try {
-//     const user = await User.findById(req.params.id).select("-password");
-//     if (!user) return res.status(404).json({ message: "User not found" });
-//     res.json(user);
-//   } catch (err) {
-//     res.status(500).json({ message: "Server error" });
-//   }
-// });
-
-// router.get("/:id", async (req, res) => {
-//   try {
-//     const user = await User.findById(req.params.id).select("_id name avatarUrl");
-//     if (!user) return res.status(404).json({ message: "User not found" });
-//     res.json(user);
-//   } catch (err) {
-//     console.error("Fetch user failed", err);
-//     res.status(500).json({ message: "Server error" });
-//   }
-// });
-
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;

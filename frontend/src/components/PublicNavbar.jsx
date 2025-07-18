@@ -26,8 +26,9 @@ export default function PublicNavbar() {
           menuOpen ? 'block absolute top-14 right-0 bg-white w-full shadow-md z-50 p-4 space-y-4 text-right' : 'hidden'
         } md:static md:space-y-0 md:bg-transparent md:p-0 md:text-left`}>
           <li><Link to="/" className="block hover:text-blue-600">Home</Link></li>
-          <li><Link to="/jobs" className="block hover:text-blue-600">Jobs</Link></li>
+          <li><Link to="/jobs-public" className="block hover:text-blue-600">Jobs</Link></li>
           <li><Link to="/about" className="block hover:text-blue-600">About</Link></li>
+          <li><Link to="/contact" className="block hover:text-blue-600">Contact</Link></li>
 
           {/* Show login/register inside dropdown only on mobile */}
           <li className="md:hidden"><Link to="/login" className="block hover:text-blue-600">Login</Link></li>

@@ -13,50 +13,58 @@ export default function ChatWrapper() {
   const { userId } = useParams(); // ID of the person you're chatting with
   const [channel, setChannel] = useState(null);
 
-  useEffect(() => {
-    const init = async () => {
-      try {
-        const res = await api.post("/stream/token");
-        const { token, user } = res.data;
-  
-        console.log("✅ Logged-in user:", user);
-        console.log("👤 Target user from URL:", userId);
-  
-        if (!client.user) {
-          await client.connectUser(user, token);
-        }
-  
-        // ❗ Important check
-        if (!user.id || !userId || user.id === userId) {
-          console.warn("⚠️ Cannot create channel with self or invalid ID");
-          return;
-        }
-  
-        const chatId = [user.id, userId].sort().join("-");
-        const members = [...new Set([user.id, userId])];
-  
-        console.log("💬 Creating chatId:", chatId);
-        console.log("👥 Members:", members);
-  
-        const newChannel = client.channel("messaging", chatId, { members });
-  
-        await newChannel.watch();
-        console.log("✅ Channel is ready:", newChannel?.data);
-  
-        setChannel(newChannel);
-      } catch (err) {
-        console.error("❌ Stream Init Error", err);
+useEffect(() => {
+  let isMounted = true; // 🛡️ protect against premature unmount
+
+  const init = async () => {
+    try {
+      const res = await api.post("/stream/token", {
+        otherUserId: userId,
+      });
+
+      const { token, user } = res.data;
+
+      if (!client.userID) {
+        await client.connectUser(
+          {
+            id: user.id,
+            name: user.name,
+            image: user.avatarUrl,
+          },
+          token
+        );
       }
-    };
-  
-    init();
-  
-    return () => {
-      if (client.user) client.disconnectUser();
-    };
-  }, [userId]);
-  
-  
+
+      if (!user.id || !userId || user.id === userId || !isMounted) return;
+
+      const chatId = [user.id, userId].sort().join("-");
+      const members = [...new Set([user.id, userId])];
+
+      const newChannel = client.channel("messaging", chatId, { members });
+      await newChannel.watch();
+
+      if (isMounted) setChannel(newChannel);
+    } catch (err) {
+      console.error("❌ Stream Init Error", err);
+    }
+  };
+
+  init();
+
+  return () => {
+    isMounted = false;
+    setChannel(null);
+
+    if (client.userID) {
+      setTimeout(() => {
+        client.disconnectUser().catch((err) => {
+          console.error("⚠️ Disconnect failed:", err);
+        });
+      }, 300);
+    }
+  };
+}, [userId]);
+
 
   if (!channel) return <div className="p-4">🔄 Loading chat...</div>;
 
@@ -66,3 +74,7 @@ export default function ChatWrapper() {
     </Chat>
   );
 }
+
+
+
+

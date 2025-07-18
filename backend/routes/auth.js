@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 
 const router = express.Router();
 
+
 // Register
 router.post('/register', async (req, res) => {
   const { name, email, password, role } = req.body;
@@ -20,16 +21,28 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Login
+// ✅ UPDATED: Login route with role check
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, role } = req.body;
+
   try {
     const user = await User.findOne({ email });
+
+    // Check if user exists and password is correct
     if (!user || !(await user.matchPwd(password))) {
       return res.status(401).json({ msg: 'Invalid credentials' });
     }
 
-    const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '7d' });
+    // ✅ Check if user role matches requested role
+    if (user.role !== role) {
+      return res.status(403).json({ msg: `You're not registered as a ${role}` });
+    }
+
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: '1d' }
+    );
 
     res.json({ token, role: user.role, name: user.name });
   } catch (err) {

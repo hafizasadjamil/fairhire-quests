@@ -24,163 +24,6 @@ const router = express.Router();
 
 // ✅ DASHBOARD ROUTE
 
-// router.get("/dashboard", protect, isJobseeker, async (req, res) => {
-//   try {
-//     const userId = req.user.id;
-
-//     const allApps = await Application.find({ userId })
-
-//       .sort({ createdAt: -1 })
-//       .populate({
-//         path: "jobId",
-//         select: "title company location employerId",
-//         populate: {
-//           path: "employerId",
-//           select: "name avatarUrl",
-//         },
-//       });
-
-//     const oneWeekAgo = new Date();
-//     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-
-//     const statusCounts = {
-//       applied: 0,
-//       interview: 0,
-//       hired: 0,
-//       shortlisted: 0,
-//       appliedWeek: 0,
-//       interviewWeek: 0,
-//       hiredWeek: 0,
-//     };
-
-//     for (const app of allApps) {
-//       const { status, appliedAt } = app;
-//       if (statusCounts[status] !== undefined) {
-//         statusCounts[status]++;
-//         if (appliedAt >= oneWeekAgo) {
-//           statusCounts[`${status}Week`]++;
-//         }
-//       }
-//     }
-
-//     const stats = [
-//       {
-//         title: "Jobs Applied",
-//         value: allApps.length,
-//         delta: `+${statusCounts.appliedWeek} this week`,
-//         icon: "FileText",
-//       },
-//       {
-//         title: "Interviews",
-//         value: statusCounts.interview,
-//         delta: `+${statusCounts.interviewWeek} this week`,
-//         icon: "UserCheck",
-//       },
-//       {
-//         title: "Hired",
-//         value: statusCounts.hired,
-//         delta: `+${statusCounts.hiredWeek} this week`,
-//         icon: "Briefcase",
-//       },
-//     ];
-
-//     const matchDoc = await Match.findOne({
-//       user_id: userId,
-//       matches: { $exists: true, $ne: [] },
-//     });
-
-//     let matchMap = {};
-//     if (matchDoc) {
-//       const maxRank = matchDoc.matches.length;
-//       for (let m of matchDoc.matches) {
-//         const score = Math.round(((maxRank - m.rank + 1) / maxRank) * 100);
-//         matchMap[m.job_id.toString()] = score;
-
-//       }
-
-//     }
-
-//     const user = await User.findById(userId).select(
-//       "name email avatarUrl resumeUrl phone skills bio"
-//     );
-
-//     const checklist = [
-//       { label: "Name", done: !!user.name },
-//       { label: "Phone", done: !!user.phone },
-//       { label: "Skills", done: Array.isArray(user.skills) && user.skills.length > 0 },
-//       { label: "Bio", done: !!user.bio },
-//       { label: "Profile Picture", done: !!user.avatarUrl },
-//       { label: "Resume", done: !!user.resumeUrl },
-//     ];
-
-//     const completed = checklist.filter((i) => i.done).length;
-//     const progress = Math.round((completed / checklist.length) * 100);
-
-//     const savedRaw = await SavedJob.find({ userId }).populate(
-//       "jobId",
-//       "title company location"
-//     );
-//     const savedJobs = savedRaw.map((s) => ({
-//       _id: s.jobId?._id,
-//       title: s.jobId?.title || "Untitled Job",
-//       company: s.jobId?.company || "No company name",
-//       location: s.jobId?.location || "N/A",
-//     }));
-
-//     // ✅ FIXED: Events now include employer name
-//     const eventsRaw = await Event.find({ userId })
-//       .populate({
-//         path: "jobId",
-//         select: "title employerId",
-//         populate: {
-//           path: "employerId",
-//           select: "name",
-//         },
-//       })
-//       .sort({ date: 1 })
-//       .limit(100);
-
-//     const events = eventsRaw.map((ev) => ({
-//       _id: ev._id,
-//       date: ev.date,
-//       mode: ev.mode || "online",
-//       title: ev.title,
-//       jobTitle: ev.jobId?.title || "Untitled Job",
-//       employerName: ev.jobId?.employerId?.name || "Unknown Company",
-//     }));
-
-//     const recentApps = allApps.map((app) => {
-//       const match = matchMap[app.jobId?._id?.toString()] || 0;
-//       return {
-//         ...app.toObject(),
-//         match,
-//       };
-//     });
-
-//     res.json({
-//       stats,
-//       recentApps,
-//       savedJobs,
-//       progress,
-//       checklist,
-//       events,
-//       user: {
-//         name: user.name,
-//         email: user.email,
-//         phone: user.phone || null,
-//         bio: user.bio || null,
-//         skills: user.skills || [],
-//         avatarUrl: user.avatarUrl || null,
-//         resumeUrl: user.resumeUrl || null,
-//       },
-//     });
-//   } catch (err) {
-//     console.error("Dashboard error:", err);
-//     res.status(500).json({ error: "Server error" });
-//   }
-// });
-
-
 router.get("/dashboard", protect, isJobseeker, async (req, res) => {
   try {
     const userId = req.user.id;
@@ -247,7 +90,10 @@ router.get("/dashboard", protect, isJobseeker, async (req, res) => {
     const checklist = [
       { label: "Name", done: !!user.name },
       { label: "Phone", done: !!user.phone },
-      { label: "Skills", done: Array.isArray(user.skills) && user.skills.length > 0 },
+      {
+        label: "Skills",
+        done: Array.isArray(user.skills) && user.skills.length > 0,
+      },
       { label: "Bio", done: !!user.bio },
       { label: "Profile Picture", done: !!user.avatarUrl },
       { label: "Resume", done: !!user.resumeUrl },
@@ -300,16 +146,14 @@ router.get("/dashboard", protect, isJobseeker, async (req, res) => {
       ) {
         matchSkills = app.jobId.requiredSkills.filter((skill) =>
           userSkills.includes(skill.toLowerCase())
-        
         );
       }
-    
+
       return {
         ...app.toObject(),
         match,
         matchSkills,
       };
-      
     });
 
     res.json({
@@ -328,14 +172,12 @@ router.get("/dashboard", protect, isJobseeker, async (req, res) => {
         avatarUrl: user.avatarUrl || null,
         resumeUrl: user.resumeUrl || null,
       },
-      
     });
   } catch (err) {
     console.error("Dashboard error:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
-
 
 router.get("/parsed-resume", protect, isJobseeker, async (req, res) => {
   try {
@@ -554,22 +396,23 @@ router.post(
           __dirname,
           "../../fairhire-ai-engine/.venv/Scripts/python.exe"
         );
-        
+
         const scriptPath = path.resolve(
           __dirname,
           "../../fairhire-ai-engine/main.py"
         );
-        
-        exec(`"${pythonPath}" "${scriptPath}" --mode batch`, (error, stdout, stderr) => {
-          if (error) {
-            console.error("❌ Failed to trigger AI Engine:", error);
-            return;
+
+        exec(
+          `"${pythonPath}" "${scriptPath}" --mode batch`,
+          (error, stdout, stderr) => {
+            if (error) {
+              console.error("❌ Failed to trigger AI Engine:", error);
+              return;
+            }
+            console.log("✅ AI Engine triggered successfully:\n", stdout);
           }
-          console.log("✅ AI Engine triggered successfully:\n", stdout);
-        });
+        );
         // ✅ Trigger AI pipeline after resume upload
-        
-        
       }
 
       // ✅ Profile Fields
@@ -591,7 +434,6 @@ router.post(
           } catch {
             console.error(`❌ Failed to parse ${key}:`, req.body[key]);
             updates[key] = [];
-            
           }
         } else {
           updates[key] = req.body[key] || "";
@@ -606,13 +448,11 @@ router.post(
 
       res.status(200).json(updatedUser);
     } catch (err) {
-    
       console.error("❌ Upload failed:", err);
       res.status(500).json({ msg: "Upload failed" });
     }
   }
 );
-
 
 router.get("/profile", protect, isJobseeker, async (req, res) => {
   try {

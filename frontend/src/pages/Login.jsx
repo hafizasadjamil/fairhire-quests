@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import api from "../api";
@@ -10,25 +10,26 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(true);
 
   const navigate = useNavigate();
-  const { login } = useAuth(); // Custom AuthContext
+  const { login } = useAuth();
+
+  useEffect(() => {
+    const timer = setTimeout(() => setPageLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // POST request to /api/auth/login with role
-      const { data } = await api.post("/auth/login", { email, password });
+      const { data } = await api.post("/auth/login", { email, password, role });
 
-      // ⛔ NOTE: Role server se aata hai, input se nahi
-      // ✅ Save token and user info in context
       login(data.token, data.role);
-
       toast.success("Logged in successfully!");
 
-      // 🔀 Navigate based on actual user role from backend
       if (data.role === "employer") {
         navigate("/employer/dashboard");
       } else if (data.role === "jobseeker") {
@@ -44,13 +45,21 @@ export default function Login() {
     }
   };
 
+  if (pageLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-blue-50">
+        <Spinner />
+      </div>
+    );
+  }
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-teal-50">
       <form
         onSubmit={submit}
         className="w-full max-w-md bg-white shadow-lg rounded-xl p-8"
       >
-        {/* Role display toggle (UI only) */}
+        {/* Role toggle */}
         <div className="grid grid-cols-2 mb-6 rounded-t-lg overflow-hidden">
           {["jobseeker", "employer"].map((r) => (
             <button
@@ -68,22 +77,25 @@ export default function Login() {
           ))}
         </div>
 
+        {/* Email */}
         <input
           type="email"
           placeholder="Email"
-          className="w-full border rounded-md p-2 mb-3 focus:outline-blue-500 outline"
+          className="w-full border border-gray-300 rounded-md p-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setEmail(e.target.value)}
           required
         />
 
+        {/* Password */}
         <input
           type="password"
           placeholder="Password"
-          className="w-full border rounded-md p-2 mb-6 focus:outline-blue-500 outline"
+          className="w-full border border-gray-300 rounded-md p-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setPassword(e.target.value)}
           required
         />
 
+        {/* Submit */}
         <button
           type="submit"
           disabled={loading}

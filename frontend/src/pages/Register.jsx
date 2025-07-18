@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import api from "../api";
 import Spinner from "../components/jobSeekerDashboard/Spinner";
-// import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Register() {
   const [role, setRole] = useState("jobseeker");
   const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(true); // ⏳ For page spinner
+
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -17,7 +19,12 @@ export default function Register() {
   });
 
   const navigate = useNavigate();
-  // const { login } = useAuth();
+  const { login } = useAuth();
+
+  useEffect(() => {
+    const timer = setTimeout(() => setPageLoading(false), 800);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -25,35 +32,42 @@ export default function Register() {
 
   const submit = async (e) => {
     e.preventDefault();
-  
+
     if (form.password !== form.confirm) {
       toast.warn("Passwords do not match");
       return;
     }
-  
+
     try {
       setLoading(true);
-  
+
       const fullName = `${form.firstName} ${form.lastName}`;
-      const payload = {
+      const { data } = await api.post("/auth/register", {
         name: fullName,
         email: form.email,
         password: form.password,
         role,
-      };
-  
-      await api.post("/auth/register", payload);
-  
-      toast.success("Account created successfully! Please log in.");
+      });
+
+      login(data.token, data.role);
+      toast.success("Account created successfully!");
       navigate("/login");
-  
+
     } catch (err) {
       toast.error(err.response?.data?.msg || "Registration failed");
     } finally {
       setLoading(false);
     }
   };
-  
+
+  // ⏳ Page-level loading spinner
+  if (pageLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-blue-50">
+        <Spinner />
+      </div>
+    );
+  }
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-teal-50">
@@ -92,7 +106,7 @@ export default function Register() {
               placeholder={inp.placeholder}
               required
               onChange={handleChange}
-              className="w-full border rounded-md p-2 mb-3 focus:outline-blue-500"
+              className="w-full border border-gray-300 rounded-md p-2 mb-3 outline-none focus:ring-2 focus:ring-blue-500 transition"
             />
           ))}
 

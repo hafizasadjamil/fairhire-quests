@@ -1,16 +1,15 @@
-import express from 'express';
-import Job from '../models/Job.js';
+import express from "express";
+import Job from "../models/Job.js";
 import Application from "../models/Application.js";
-import protect from '../middleware/protect.js';
-import { sendNotification } from '../utils/sendNotification.js';
-import User from '../models/User.js';
+import protect from "../middleware/protect.js";
+import { sendNotification } from "../utils/sendNotification.js";
+import User from "../models/User.js";
 import Event from "../models/Event.js";
 import { matchScoreCalculator } from "../utils/matchEngine.js"; // Your AI matching logic
 import { isEmployer } from "../middleware/protect.js";
 import CandidateProfile from "../models/CandidateProfile.js";
 
 const router = express.Router();
- 
 
 // 🔵 Create Job (Employer only)
 router.post("/create", protect, async (req, res) => {
@@ -22,7 +21,7 @@ router.post("/create", protect, async (req, res) => {
     // Notify all jobseekers
     const jobseekers = await User.find({ role: "jobseeker" });
     await Promise.all(
-      jobseekers.map(js =>
+      jobseekers.map((js) =>
         sendNotification(
           js._id,
           `New job posted: ${newJob.title}`,
@@ -38,7 +37,6 @@ router.post("/create", protect, async (req, res) => {
   }
 });
 
-
 // 🔵 Get All Jobs (Public)
 router.get("/", async (req, res) => {
   try {
@@ -52,12 +50,13 @@ router.get("/", async (req, res) => {
   }
 });
 
-
 // 🔵 Get Single Job by ID (Public)
 router.get("/:id", async (req, res) => {
   try {
-    const job = await Job.findById(req.params.id)
-      .populate("employerId", "name avatarUrl");
+    const job = await Job.findById(req.params.id).populate(
+      "employerId",
+      "name avatarUrl"
+    );
     if (!job) return res.status(404).json({ msg: "Job not found" });
     res.json(job);
   } catch (err) {
@@ -81,15 +80,12 @@ router.get("/:id/applications", protect, async (req, res) => {
   }
 });
 
-
-
-
-
-
 // 🔵 Get Employer’s Own Jobs
 router.get("/my", protect, async (req, res) => {
   try {
-    const jobs = await Job.find({ employerId: req.user.id }).sort({ createdAt: -1 });
+    const jobs = await Job.find({ employerId: req.user.id }).sort({
+      createdAt: -1,
+    });
 
     const jobsWithCounts = await Promise.all(
       jobs.map(async (job) => {
@@ -104,7 +100,6 @@ router.get("/my", protect, async (req, res) => {
   }
 });
 
-
 // 🔵 Update Job (with skill/requirements parsing)
 router.put("/:id", protect, async (req, res) => {
   try {
@@ -112,9 +107,12 @@ router.put("/:id", protect, async (req, res) => {
       ...req.body,
       requirements: Array.isArray(req.body.requirements)
         ? req.body.requirements
-        : typeof req.body.requirements === 'string'
-          ? req.body.requirements.split(',').map(s => s.trim()).filter(Boolean)
-          : [],
+        : typeof req.body.requirements === "string"
+        ? req.body.requirements
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean)
+        : [],
     };
 
     const job = await Job.findOneAndUpdate(
@@ -129,17 +127,6 @@ router.put("/:id", protect, async (req, res) => {
   }
 });
 
-
-// 🔵 Delete Job
-// router.delete("/:id", protect, async (req, res) => {
-//   try {
-//     await Job.findOneAndDelete({ _id: req.params.id, employerId: req.user.id });
-//     res.json({ msg: "Job deleted" });
-//   } catch (err) {
-//     res.status(500).json({ msg: "Delete failed" });
-//   }
-// });
-
 // 🔵 Delete Job and Related Data
 router.delete("/:id", protect, async (req, res) => {
   try {
@@ -151,17 +138,15 @@ router.delete("/:id", protect, async (req, res) => {
       employerId: req.user.id,
     });
 
-    if (!job) return res.status(404).json({ msg: "Job not found or unauthorized" });
+    if (!job)
+      return res.status(404).json({ msg: "Job not found or unauthorized" });
 
     // 🔁 Delete related data
     await Promise.all([
       Application.deleteMany({ jobId }),
       Event.deleteMany({ jobId }),
       Interview.deleteMany({ jobId }),
-      User.updateMany(
-        { savedJobs: jobId },
-        { $pull: { savedJobs: jobId } }
-      ),
+      User.updateMany({ savedJobs: jobId }, { $pull: { savedJobs: jobId } }),
     ]);
 
     res.json({ msg: "Job and all related data deleted successfully" });
@@ -170,10 +155,6 @@ router.delete("/:id", protect, async (req, res) => {
     res.status(500).json({ msg: "Delete failed" });
   }
 });
-
-
-
-
 
 router.put("/applications/:id/status", async (req, res) => {
   try {
@@ -216,49 +197,83 @@ router.put("/applications/:id/status", async (req, res) => {
   }
 });
 
+// ✅ Get application status between employer and applicant
+router.get(
+  "/applications/status/:employerId/:applicantId",
+  async (req, res) => {
+    const { employerId, applicantId } = req.params;
+
+    try {
+      // Find any job that belongs to the employer
+      const jobs = await Job.find({ employerId }).select("_id");
+      const jobIds = jobs.map((j) => j._id);
+
+      // Find the application for those jobs + user
+      const application = await Application.findOne({
+        jobId: { $in: jobIds },
+        userId: applicantId,
+      });
+
+      if (!application) {
+        return res.json({ status: "unknown" });
+      }
+
+      res.json({ status: application.status || "unknown" });
+    } catch (err) {
+      console.error("❌ Status fetch failed:", err);
+      res.status(500).json({ error: "Failed to get application status" });
+    }
+  }
+);
 
 // 🔵 Get Blind Applications for a Job (with match score)
 
+router.get(
+  "/:jobId/applications-blind",
+  protect,
+  isEmployer,
+  async (req, res) => {
+    try {
+      const { jobId } = req.params;
 
-router.get("/:jobId/applications-blind", protect, isEmployer, async (req, res) => {
-  try {
-    const { jobId } = req.params;
+      // 1. Get the job posting (for required skills)
+      const job = await Job.findById(jobId);
+      if (!job) return res.status(404).json({ msg: "Job not found" });
 
-    // 1. Get the job posting (for required skills)
-    const job = await Job.findById(jobId);
-    if (!job) return res.status(404).json({ msg: "Job not found" });
+      const jobSkills = job.skills || []; // 🧠 Required skills for matching
 
-    const jobSkills = job.skills || []; // 🧠 Required skills for matching
+      // 2. Get all applications
+      const applications = await Application.find({ jobId });
 
-    // 2. Get all applications
-const applications = await Application.find({ jobId });
+      // 3. Extract candidate profiles for each application
+      const result = await Promise.all(
+        applications.map(async (app) => {
+          const profile = await CandidateProfile.findOne({
+            userId: app.userId,
+          });
 
-    // 3. Extract candidate profiles for each application
-    const result = await Promise.all(
-      applications.map(async (app) => {
-        const profile = await CandidateProfile.findOne({ userId: app.userId });
+          if (!profile) return null;
 
-        if (!profile) return null;
+          const score = matchScoreCalculator(jobSkills, profile.skills || []);
 
-        const score = matchScoreCalculator(jobSkills, profile.skills || []);
+          return {
+            skills: profile.skills || [],
+            experience: profile.experience || "N/A",
+            certifications: profile.certifications || [],
+            matchScore: score,
+          };
+        })
+      );
 
-        return {
-          skills: profile.skills || [],
-          experience: profile.experience || "N/A",
-          certifications: profile.certifications || [],
-          matchScore: score,
-        };
-      })
-    );
+      // 4. Remove nulls (if profile not found)
+      const filtered = result.filter((r) => r !== null);
 
-    // 4. Remove nulls (if profile not found)
-    const filtered = result.filter((r) => r !== null);
-
-    res.json(filtered);
-  } catch (err) {
-    console.error("Blind applications error:", err);
-    res.status(500).json({ msg: "Server error" });
+      res.json(filtered);
+    } catch (err) {
+      console.error("Blind applications error:", err);
+      res.status(500).json({ msg: "Server error" });
+    }
   }
-});
+);
 
 export default router;

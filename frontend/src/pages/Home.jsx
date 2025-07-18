@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Spinner from "../components/jobSeekerDashboard/Spinner";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading (e.g. for fetching data, animations, etc.)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1 second
+
+    return () => clearTimeout(timer);
+  }, []);
+
+       if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-blue-50">
+        <Spinner />
+      </div>
+    )
+  }
+
   return (
+
+
     <div className="min-h-screen bg-gradient-to-r from-blue-50 to-teal-50 px-6 py-10">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* 🟦 Hero Section */}

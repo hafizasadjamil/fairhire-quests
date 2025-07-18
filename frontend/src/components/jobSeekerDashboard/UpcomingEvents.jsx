@@ -1,39 +1,3 @@
-// // import React from "react";
-// // import { Target, XCircle } from "lucide-react";
-// // import moment from "moment";
-
-// // export default function UpcomingEvents({ events }) {
-// //   return (
-// //     <section className="bg-white shadow rounded-lg p-6">
-// //       <h3 className="font-semibold text-lg mb-4">Upcoming Events</h3>
-// // {events.map((ev, i) => (
-// //   <li key={i} className="flex items-center justify-between border-b pb-2">
-// //     <div className="flex items-center gap-2 text-sm">
-// //       {ev.title.toLowerCase().includes("interview") ? (
-// //         <span>✅</span>
-// //       ) : (
-// //         <span>❌</span>
-// //       )}
-
-// // <span className="font-semibold capitalize">
-// //   {ev.title.includes("🎉") || ev.title.includes("😔")
-// //     ? ev.title
-// //     : `Interview For ${ev.title} @ ${ev.employerName}`}
-// // </span>
-
-
-// //     </div>
-
-// //     <span className="text-xs text-gray-400">
-// //       {moment(ev.date).format("DD MMM YYYY")}
-// //     </span>
-// //   </li>
-// // ))}
-
-// //     </section>
-// //   );
-// // }
-
 import React from "react";
 import moment from "moment";
 import { CheckCircle, XCircle, PartyPopper, Clock } from "lucide-react";

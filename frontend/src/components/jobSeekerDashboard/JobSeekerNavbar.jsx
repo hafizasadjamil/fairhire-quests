@@ -78,7 +78,7 @@ export default function JobSeekerNavbar() {
           <li><Link to="/jobseeker/dashboard" className="block py-2 hover:text-blue-600">Dashboard</Link></li>
           <li><Link to="/jobs" className="block py-2 hover:text-blue-600">All Jobs</Link></li>
           <li><Link to="/jobseeker/matching-jobs" className="block py-2 hover:text-blue-600">Matching Jobs</Link></li>
-
+          <li><Link to="/chat" className="block py-2 hover:text-blue-600">Chat</Link></li>
 
         </ul>
 
