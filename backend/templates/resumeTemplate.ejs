@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume</title>
+    <style>
+      body { font-family: Arial; padding: 30px; }
+      h1 { color: #333; }
+    </style>
+  </head>
+  <body>
+    <h1><%= firstName %> <%= lastName %></h1>
+    <p><strong>Email:</strong> <%= email %></p>
+    <p><strong>Experience:</strong> <%= experience %></p>
+    <p><strong>Skills:</strong> <%= skills.join(', ') %></p>
+    <p><strong>Certifications:</strong> <%= certifications?.join(', ') %></p>
+  </body>
+</html>
